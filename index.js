@@ -1,7 +1,9 @@
+// This is setup to run in localhost
+
 const express = require('express');
 const path = require('path')
 const app = express();
-const port = 3000;
+var server_port = 5000
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
@@ -11,8 +13,8 @@ app.get('/', (req, res) => {
     res.render('page')
 })
 
-var midPort = app.listen(port, () => {
-    console.log('On port 3000')
+var midPort = app.listen(server_port, () => {
+    console.log(`On port ${server_port}`)
 })
 
 const io = require('socket.io').listen(midPort);

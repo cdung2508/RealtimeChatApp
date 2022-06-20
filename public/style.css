@@ -41,8 +41,6 @@ body {
 #content {
     background-color: #fff;
     padding: 1rem;
-    /* width: 500px;
-    height: 400px; */
     min-width: 60vw;
     height: 50vh;
     border: 1px solid black;

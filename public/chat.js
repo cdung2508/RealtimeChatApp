@@ -1,6 +1,8 @@
 window.onload = function() {
+    var server_host = 'http://localhost'
+    var NODE_ENV = 5000
     var messages = [];
-    var socket = io.connect('http://localhost:3000')
+    var socket = io.connect(`${server_host}:${NODE_ENV}`)
     var name = prompt('Enter a username:')
     while (name === '' || name === null) {
         name = prompt('Enter your name:')
@@ -21,6 +23,7 @@ window.onload = function() {
             var join = '<i>' + data.name + ' has joined the chat! </i><br>'
             var showJoin = document.getElementById('showjoin');
             showJoin.innerHTML = join
+            showJoin.style.backgroundColor = 'rgb(72, 177, 93)'
             showJoin.style.opacity = '1';
             
             setTimeout(() => {
@@ -34,6 +37,7 @@ window.onload = function() {
         if (data === 'transport close') {
             var showLeft = document.getElementById('showjoin');
             showLeft.innerHTML = 'Someone has left the chat.'
+            showLeft.style.backgroundColor = 'rgb(232, 125, 82)'
             showLeft.style.opacity = '1';
             
             setTimeout(() => {
