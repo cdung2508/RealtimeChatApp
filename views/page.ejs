@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat chit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/chat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="showjoin"></div>
+    
+    <div class="container">
+        <h1 class="title">Chat App</h1>
+        <div id="counterUser">0</div>
+        <div class="chat">
+            <div id="content"></div>
+            <p class="username"><b>Chat with username: </b></p>
+            <div class="form-custom">
+                <input type="text" id="field">
+                <button type="submit" id="send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
