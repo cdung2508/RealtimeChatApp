@@ -27,7 +27,7 @@ window.onload = function() {
                 showJoin.style.opacity = '0';
             }, 5000)
         }
-        counterUser.innerText = counter
+        counterUser.innerText = 'Online: ' + counter
     })
     
     socket.on('message', (data, counter) => {
@@ -39,7 +39,7 @@ window.onload = function() {
             setTimeout(() => {
                 showLeft.style.opacity = '0';
             }, 5000)
-            counterUser.innerText = counter
+            counterUser.innerText = 'Online: ' + counter
         }
         else if (data.message) {
             messages.push(data)
