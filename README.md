@@ -5,7 +5,7 @@ Realtime Chat App with Nodejs
 
 ## Demo
 
-link: 
+[Link Demo](https://chatapp-realtime-nodejs.herokuapp.com/)
 
 ## Installation
 
